@@ -187,10 +187,11 @@
                 </div>
                 <div class="channels-wrap">
                     <div class="channels">
+                        @foreach ($categories as $item)
                         <div class="channel clearfix">
                             <div class="channel-content clearfix">
                                 <div class="channel-avatar">
-                                    <a href="channel/news-politics/index.html" title="NEWS &#038; POLITICS">
+                                    <a href="/category/{{ $item->id }}" title="{{ $item->name }}">
                                         <img width="100" height="100"
                                             src="/client/uploads/2017/10/if_msn_2308058.png"
                                             class="attachment-100x100 size-100x100" alt=""
@@ -200,21 +201,21 @@
                                 </div>
                                 <div class="channel-info">
                                     <p class="channel-name">
-                                        <a href="channel/news-politics/index.html" title="NEWS &#038; POLITICS">
-                                            NEWS &#038; POLITICS
+                                        <a href="/category/{{ $item->id }}" title="{{ $item->name }}">
+                                            {{ $item->name }}
                                         </a>
                                     </p>
                                     <p class="channel-interaction"><i class="ion-ios-videocam"></i>
-                                        <a href="javascript:void(0)"> 6 videos</a><i class="ion-eye"></i> <a
+                                        <a href="javascript:void(0)">{{ \DB::table('videos')->where('category_id',$item->id)->count() }} videos</a><i class="ion-eye"></i> <a
                                             href="javascript:void(0)">125</a>
                                     </p>
 
                                     <div class="channel-button " id="">
-                                        <a href="login/index2422.html?redirect_to=http%3A%2F%2Fvideoflix.cactusthemes.com%2Fchannel%2Fnews-politics%2F"
+                                        <a href="/category/{{ $item->id }}"
                                             class="btn btn-default subscribe font-size-1 metadata-font">
                                             <i class="far fa-circle"></i><i class="fas fa-check"></i>
-                                            <span class="first-title">Subscribe</span>
-                                            <span class="last-title">Subscribed</span>
+                                            <span class="first-title">VIEW</span>
+                                            <span class="last-title">VIEW</span>
                                         </a>
                                         <input type="hidden" name="url_ajax" value="wp-admin/admin-ajax.html">
 
@@ -231,141 +232,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="channel clearfix">
-                            <div class="channel-content clearfix">
-                                <div class="channel-avatar">
-                                    <a href="channel/young-directors/index.html" title="YOUNG DIRECTORS">
-                                        <img width="100" height="100"
-                                            src="/client/uploads/2017/09/if_share_2308050.png"
-                                            class="attachment-100x100 size-100x100" alt=""
-                                            srcset="/client/uploads/2017/09/if_share_2308050.png 128w, /client/uploads/2017/09/if_share_2308050-50x50.png 50w"
-                                            sizes="(max-width: 100px) 100vw, 100px" />
-                                    </a>
-                                </div>
-                                <div class="channel-info">
-                                    <p class="channel-name">
-                                        <a href="channel/young-directors/index.html" title="YOUNG DIRECTORS">
-                                            YOUNG DIRECTORS
-                                        </a>
-                                    </p>
-                                    <p class="channel-interaction"><i class="ion-ios-videocam"></i>
-                                        <a href="javascript:void(0)"> 1 videos</a><i class="ion-eye"></i> <a
-                                            href="javascript:void(0)">48</a>
-                                    </p>
-
-                                    <div class="channel-button " id="">
-                                        <a href="login/index14a2.html?redirect_to=http%3A%2F%2Fvideoflix.cactusthemes.com%2Fchannel%2Fyoung-directors%2F"
-                                            class="btn btn-default subscribe font-size-1 metadata-font">
-                                            <i class="far fa-circle"></i><i class="fas fa-check"></i>
-                                            <span class="first-title">Subscribe</span>
-                                            <span class="last-title">Subscribed</span>
-                                        </a>
-                                        <input type="hidden" name="url_ajax" value="wp-admin/admin-ajax.html">
-
-                                        <span class="font-size-1 metadata-font sub-count">
-                                            <span class="subscribe-counter">3</span>
-                                        </span>
-
-                                        <span class="info-dot"></span>
-
-
-                                        <span class="font-size-1 metadata-font sub-count meta-2">
-                                            1 videos </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="channel clearfix">
-                            <div class="channel-content clearfix">
-                                <div class="channel-avatar">
-                                    <a href="channel/firm-entertainment/index.html" title="ENTERTAINMENT">
-                                        <img width="100" height="100"
-                                            src="/client/uploads/2017/10/if_youtube_2308143.png"
-                                            class="attachment-100x100 size-100x100" alt=""
-                                            srcset="/client/uploads/2017/10/if_youtube_2308143.png 128w, /client/uploads/2017/10/if_youtube_2308143-50x50.png 50w"
-                                            sizes="(max-width: 100px) 100vw, 100px" />
-                                    </a>
-                                </div>
-                                <div class="channel-info">
-                                    <p class="channel-name">
-                                        <a href="channel/firm-entertainment/index.html" title="ENTERTAINMENT">
-                                            ENTERTAINMENT
-                                        </a>
-                                    </p>
-                                    <p class="channel-interaction"><i class="ion-ios-videocam"></i>
-                                        <a href="javascript:void(0)"> 7 videos</a><i class="ion-eye"></i> <a
-                                            href="javascript:void(0)">186</a>
-                                    </p>
-
-                                    <div class="channel-button " id="">
-                                        <a href="login/index235a.html?redirect_to=http%3A%2F%2Fvideoflix.cactusthemes.com%2Fchannel%2Ffirm-entertainment%2F"
-                                            class="btn btn-default subscribe font-size-1 metadata-font">
-                                            <i class="far fa-circle"></i><i class="fas fa-check"></i>
-                                            <span class="first-title">Subscribe</span>
-                                            <span class="last-title">Subscribed</span>
-                                        </a>
-                                        <input type="hidden" name="url_ajax" value="wp-admin/admin-ajax.html">
-
-                                        <span class="font-size-1 metadata-font sub-count">
-                                            <span class="subscribe-counter">7</span>
-                                        </span>
-
-                                        <span class="info-dot"></span>
-
-
-                                        <span class="font-size-1 metadata-font sub-count meta-2">
-                                            7 videos </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="channel clearfix">
-                            <div class="channel-content clearfix">
-                                <div class="channel-avatar">
-                                    <a href="channel/videoflix/index.html" title="VideoFlix">
-                                        <img width="100" height="100"
-                                            src="/client/uploads/2018/06/if_envato_2308069.png"
-                                            class="attachment-100x100 size-100x100" alt=""
-                                            srcset="/client/uploads/2018/06/if_envato_2308069.png 128w, /client/uploads/2018/06/if_envato_2308069-50x50.png 50w"
-                                            sizes="(max-width: 100px) 100vw, 100px" />
-                                    </a>
-                                </div>
-                                <div class="channel-info">
-                                    <p class="channel-name">
-                                        <a href="channel/videoflix/index.html" title="VideoFlix">
-                                            VideoFlix
-                                        </a>
-                                    </p>
-                                    <p class="channel-interaction"><i class="ion-ios-videocam"></i>
-                                        <a href="javascript:void(0)"> 0 videos</a><i class="ion-eye"></i> <a
-                                            href="javascript:void(0)">61</a>
-                                    </p>
-
-                                    <div class="channel-button " id="">
-                                        <a href="login/index7e51.html?redirect_to=http%3A%2F%2Fvideoflix.cactusthemes.com%2Fchannel%2Fvideoflix%2F"
-                                            class="btn btn-default subscribe font-size-1 metadata-font">
-                                            <i class="far fa-circle"></i><i class="fas fa-check"></i>
-                                            <span class="first-title">Subscribe</span>
-                                            <span class="last-title">Subscribed</span>
-                                        </a>
-                                        <input type="hidden" name="url_ajax" value="wp-admin/admin-ajax.html">
-
-                                        <span class="font-size-1 metadata-font sub-count">
-                                            <span class="subscribe-counter">1</span>
-                                        </span>
-
-                                        <span class="info-dot"></span>
-
-
-                                        <span class="font-size-1 metadata-font sub-count meta-2">
-                                            0 videos </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

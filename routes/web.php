@@ -19,4 +19,6 @@ Route::group(['namespace' => 'App\Http\Controllers'],function(){
     Route::post('videos/add','HomeController@postAdd');
 
     Route::get('video/{id}','HomeController@getDetail');
+
+    Route::get('category/{id}','HomeController@categoryList');
 });

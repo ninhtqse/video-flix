@@ -35,4 +35,10 @@ class HomeController extends Controller
         $video = DB::table('videos')->where('id',$id)->first();
         return view('client.home.detail',\compact('video'));
     }
+
+    public function categoryList($id)
+    {
+        $videos = DB::table('videos')->where('category_id',$id)->get();
+        return view('client.category.index',\compact('videos'));
+    }
 }
