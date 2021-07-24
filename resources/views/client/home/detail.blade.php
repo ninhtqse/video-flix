@@ -26,6 +26,9 @@
 		.cactus-sidebar-control .main-content-col{
 			width: 67%;
 		}
+		.cactus-row .top-left-menu{
+			left: 0;
+		}
 	</style>
 </head>
 

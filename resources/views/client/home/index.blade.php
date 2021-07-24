@@ -122,7 +122,9 @@
                 </div>
                 <div class="slide">
                     @foreach (\DB::table('videos')->where('category_id',$item->id)->orderBy('created_at','desc')->get() as $video)
+                    <a href="video/{{ $video->id }}">
                     <div class="slide-item slide-item-146" data-id="1-146">
+                      
                         <div class="item-thumb"
                             style="background-image: url(/uploads/{{ $video->avata }})">
                             <div class="top-slide">
@@ -144,7 +146,7 @@
                                             class="author cactus-info font-size-1"><span>videoflix</span></a>
                                         / <a href="video/{{ $video->id }}"
                                             target="_self" class="cactus-info" rel="bookmark"><time
-                                                datetime="2017-10-02T08:11:31+00:00" class="entry-date updated">{{ $item->created_at }}</time></a> </p>
+                                                datetime="2017-10-02T08:11:31+00:00" class="entry-date updated">{{ $video->created_at }}</time></a> </p>
                                     <p>
                                         ► {{ $video->description }}
                                     </p>
@@ -163,6 +165,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     @endforeach
                 </div>
             </div>
